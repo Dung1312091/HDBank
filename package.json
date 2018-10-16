@@ -1,0 +1,36 @@
+{
+  "name": "with-redux-saga",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "es6-promise": "4.1.1",
+    "express": "^4.16.3",
+    "isomorphic-unfetch": "2.0.0",
+    "next": "^7.0.1",
+    "next-redux-saga": "3.0.0",
+    "next-redux-wrapper": "2.0.0",
+    "node-sass": "^4.9.3",
+    "nprogress": "^0.2.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-ga": "^2.5.3",
+    "react-intl": "^2.7.1",
+    "react-redux": "5.0.7",
+    "redux": "4.0.0",
+    "redux-saga": "0.16.0",
+    "universal-cookie": "^3.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-react": "^7.11.1",
+    "redux-devtools-extension": "2.13.2",
+    "redux-logger": "^3.0.6"
+  }
+}
