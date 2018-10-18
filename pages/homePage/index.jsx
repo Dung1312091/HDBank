@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import { FormattedMessage, injectIntl } from "react-intl";
 import { loadFakeDataUsers, loadFakeDataPosts } from "./action";
 import { withRouter } from "next/router";
-
 class Index extends React.Component {
   static async getInitialProps(props) {
     const { store, isServer, asPath } = props.ctx;
@@ -29,6 +28,7 @@ class Index extends React.Component {
             values={{ what: "react-intl" }}
           />
         </h1>
+        <img src="/static/image/avt.jpg" />
         {placeholderData && (
           <pre>
             <code>{JSON.stringify(placeholderData, null, 2)}</code>
