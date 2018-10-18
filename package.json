@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
+    "precommit": "lint-staged",
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "eslint-check": "eslint .",
+    "eslint-fix": "eslint . --fix"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
@@ -19,6 +22,7 @@
     "next-routes": "^1.4.2",
     "node-sass": "^4.9.3",
     "nprogress": "^0.2.0",
+    "pre-commit": "^1.2.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-ga": "^2.5.3",
