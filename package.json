@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
-    "precommit": "lint-staged",
+    "pre-commit": "eslint-check",
     "dev": "node server.js",
     "build": "next build",
     "start": "next start",
-    "eslint-check": "eslint .",
+    "eslint-check": "eslint ./ --cache --ignore-pattern .gitignore",
     "eslint-fix": "eslint . --fix"
   },
   "dependencies": {
