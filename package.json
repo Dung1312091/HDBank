@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "license": "ISC",
   "scripts": {
-    "pre-commit": "eslint-check",
+    "pre-commit": "lint-staged",
     "dev": "node server.js",
     "build": "next build",
     "start": "next start",
     "eslint-check": "eslint ./ --cache --ignore-pattern .gitignore",
     "eslint-fix": "eslint . --fix"
   },
+  "pre-commit": [
+    "eslint-check"
+  ],
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.18.0",
