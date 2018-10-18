@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { connect, compose } from "react-redux";
+import React, from "react";
+import { connect } from "react-redux";
 import { FormattedMessage, injectIntl } from "react-intl";
 import { loadFakeDataUsers, loadFakeDataPosts } from "./action";
 import { withRouter } from "next/router";
