@@ -1,17 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import { FormattedMessage, injectIntl } from "react-intl";
-import {
-  loadFakeDataUsers,
-  tickClock,
-  loadFakeDataPosts
-} from "../actions/actionDemo";
+import { loadFakeDataUsers, loadFakeDataPosts } from "./action";
 import { withRouter } from "next/router";
 
 class Index extends React.Component {
   static async getInitialProps(props) {
     const { store, isServer, asPath } = props.ctx;
-    store.dispatch(tickClock(isServer));
     if (asPath === "/") {
       store.dispatch(loadFakeDataUsers());
     } else if (asPath === "/enterprise") {
@@ -46,7 +41,7 @@ class Index extends React.Component {
 }
 const mapStateToProp = state => {
   return {
-    placeholderData: state.demoReducer.placeholderData
+    placeholderData: state.homeReducer.placeholderData
   };
 };
 export default withRouter(injectIntl(connect(mapStateToProp)(Index)));

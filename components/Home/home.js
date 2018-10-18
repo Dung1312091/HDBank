@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { FormattedMessage, injectIntl } from "react-intl";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "../../routes";
 import "./style.scss";
 class MenuSideBar extends Component {
   render() {
@@ -8,7 +9,7 @@ class MenuSideBar extends Component {
       <div>
         <ul>
           <li className="menu">
-            <Link href="/">
+            <Link route="home">
               <a>
                 <FormattedMessage
                   id="app.personal"
@@ -20,7 +21,7 @@ class MenuSideBar extends Component {
             </Link>
           </li>
           <li className="menu">
-            <Link href="/?site=enterprise" as="/enterprise">
+            <Link route="enterprise">
               <a>
                 <FormattedMessage
                   id="app.enterprise"
@@ -32,7 +33,7 @@ class MenuSideBar extends Component {
             </Link>
           </li>
           <li className="menu">
-            <Link href="/?site=preferred-customers" as="/referred-customers">
+            <Link route="preferred-customers">
               <a>
                 <FormattedMessage
                   id="app.preferred"
@@ -44,7 +45,7 @@ class MenuSideBar extends Component {
             </Link>
           </li>
           <li className="menu">
-            <Link href="/?site=investors" as="/investors">
+            <Link route="investors">
               <a>
                 <FormattedMessage
                   id="app.investors"
@@ -55,6 +56,64 @@ class MenuSideBar extends Component {
               </a>
             </Link>
           </li>
+          <li className="menu">
+            <Link route="/post/12">
+              <a>
+                <FormattedMessage
+                  id="app.investors"
+                  defaultMessage="aaaaaaaaaaaaaaaaa"
+                  description="Welcome header on app main page"
+                  values={{ what: "react-intl" }}
+                />
+              </a>
+            </Link>
+          </li>
+          {/* <li className="menu">
+            <Link route="home">
+              <a>
+                <FormattedMessage
+                  id="app.investors"
+                  defaultMessage="aaaaaaaaaaaaaaaaa"
+                  description="Welcome header on app main page"
+                  values={{ what: "react-intl" }}
+                />
+              </a>
+            </Link>
+          </li>
+          <li className="menu">
+            <Link route="enterprise">
+              <a>
+                <FormattedMessage
+                  id="app.investors"
+                  defaultMessage="aaaaaaaaaaaaaaaaa"
+                  description="Welcome header on app main page"
+                  values={{ what: "react-intl" }}
+                />
+              </a>
+            </Link>
+          </li>
+          <li className="menu">
+            <Link route="/post/12">
+              <a>
+                <FormattedMessage
+                  id="app.investors"
+                  defaultMessage="aaaaaaaaaaaaaaaaa"
+                  description="Welcome header on app main page"
+                  values={{ what: "react-intl" }}
+                />
+              </a>
+            </Link>
+            <Link route="/post/34">
+              <a>
+                <FormattedMessage
+                  id="app.investors"
+                  defaultMessage="aaaaaaaaaaaaaaaaa"
+                  description="Welcome header on app main page"
+                  values={{ what: "react-intl" }}
+                />
+              </a>
+            </Link> */}
+          {/* </li> */}
         </ul>
       </div>
     );

@@ -1,29 +1,27 @@
 const express = require("express");
+const { createServer } = require("http");
 const next = require("next");
-
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
+const routes = require("./routes");
 const handle = app.getRequestHandler();
+const handler = routes.getRequestHandler(app);
 
 app
   .prepare()
   .then(() => {
     const server = express();
-    server.get("/:site", (req, res) => {
-      const actualPage = "/";
-      console.log("req.params===>", req.params);
-      console.log("req.query===>", req.query);
-
-      const queryParams = { site: req.params.site };
-      app.render(req, res, actualPage, queryParams);
-    });
     server.get("*", (req, res) => {
       return handle(req, res);
     });
 
-    server.listen(3000, err => {
+    // server.listen(3000, err => {
+    //   if (err) throw err;
+    //   console.log("> Ready on http://localhost:3000");
+    // });
+    createServer(handler).listen(3000, err => {
       if (err) throw err;
-      console.log("> Ready on http://localhost:3000");
+      console.log(`> Ready on http://localhost:3000`);
     });
   })
   .catch(ex => {

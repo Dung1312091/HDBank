@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import demoReducer from "./demoReducer";
+import homeReducer from "../pages/homePage/reducer";
 export default combineReducers({
-  demoReducer
+  homeReducer
 });

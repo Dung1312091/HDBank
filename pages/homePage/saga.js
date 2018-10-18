@@ -1,7 +1,8 @@
 /* global fetch */
 import { put, takeLatest } from "redux-saga/effects";
-import { actionTypes, failure, loadDataSuccess } from "../actions/actionDemo";
-import { loadFakeDataPost, loadFakeDataUser } from "../api/demo";
+import { loadDataSuccess, failure } from "./action";
+import { LOAD_DATA_USER, LOAD_DATA_POST } from "../../constants/actionTypes";
+import { loadFakeDataPost, loadFakeDataUser } from "../../api/demo";
 
 function* loadDataSagaUser() {
   try {
@@ -19,7 +20,7 @@ function* loadDataSagaPost() {
     yield put(failure(err));
   }
 }
-export function* watchDemoSaga() {
-  yield takeLatest(actionTypes.LOAD_DATA_USER, loadDataSagaUser);
-  yield takeLatest(actionTypes.LOAD_DATA_POST, loadDataSagaPost);
+export function* watchSagaHomePage() {
+  yield takeLatest(LOAD_DATA_USER, loadDataSagaUser);
+  yield takeLatest(LOAD_DATA_POST, loadDataSagaPost);
 }

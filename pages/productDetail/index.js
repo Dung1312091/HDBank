@@ -2,11 +2,9 @@ import React from "react";
 import { withRouter } from "next/router";
 
 import { FormattedMessage, injectIntl } from "react-intl";
-import { tickClock } from "../actions/actionDemo";
 class Other extends React.Component {
   static async getInitialProps(props) {
-    const { store, isServer } = props.ctx;
-    store.dispatch(tickClock(isServer));
+    const { isServer } = props.ctx;
     return { isServer };
   }
   constructor(props) {
@@ -21,7 +19,6 @@ class Other extends React.Component {
     });
   };
   render() {
-    console.log("this.props post==>", this.props);
     return (
       <div>
         <h1 className="App-title">

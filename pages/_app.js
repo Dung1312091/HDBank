@@ -34,7 +34,6 @@ Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
-    console.log("app chay==>");
     let pageProps = {};
 
     if (Component.getInitialProps) {
