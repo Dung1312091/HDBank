@@ -1,12 +1,8 @@
 {
-    "app.title": "Đây là ngôn ngữ Việt Nam",
-    "app.intro": "Demo <code>src/App.js</code>.",
-    "app.home": "Trang chủ",
-    "app.news": "Tin tức",
-    "app.product":"Sản phẩm",
-    "app.menu1": "vay",
-    "app.menu2": "dịch vụ",
-    "app.menu3": "điện tử",
-    "app.menu4": "thẻ"
-
+  "app.title": "Đây là ngôn ngữ Việt Nam",
+  "app.intro": "Demo <code>src/App.js</code>.",
+  "app.personal": "Cá nhân",
+  "app.enterprise": "Doanh nghiệp",
+  "app.preferred": "Khách hàng ưu tiên",
+  "app.investors": "Nhà đầu tư"
 }

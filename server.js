@@ -9,6 +9,14 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    server.get("/:site", (req, res) => {
+      const actualPage = "/";
+      console.log("req.params===>", req.params);
+      console.log("req.query===>", req.query);
+
+      const queryParams = { site: req.params.site };
+      app.render(req, res, actualPage, queryParams);
+    });
     server.get("*", (req, res) => {
       return handle(req, res);
     });

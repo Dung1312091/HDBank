@@ -1,11 +1,8 @@
 {
-    "app.title": "これは日本語です",
-    "app.intro": "多言語アプリケーション <code>src/App.js</code>.",
-    "app.home": "ホーム",
-    "app.news": "ニュース",
-    "app.product":"製品",
-    "app.menu1": " ローン",
-    "app.menu2": "サービス",
-    "app.menu3": "エレクトロニクス",
-    "app.menu4": "タグ"
+  "app.title": "Đây là ngôn ngữ Việt Nam",
+  "app.intro": "Demo <code>src/App.js</code>.",
+  "app.personal": "パーソナル",
+  "app.enterprise": "企業",
+  "app.preferred": "優先顧客",
+  "app.investors": "投資家"
 }

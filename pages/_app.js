@@ -4,6 +4,8 @@ import { Provider } from "react-redux";
 import withRedux from "next-redux-wrapper";
 import withReduxSaga from "next-redux-saga";
 import Header from "../components/header";
+import MenuSideBar from "../components/Home/home";
+
 import createStore from "../store";
 //ngProgress
 import NProgress from "nprogress";
@@ -32,6 +34,7 @@ Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
+    console.log("app chay==>");
     let pageProps = {};
 
     if (Component.getInitialProps) {
@@ -41,7 +44,6 @@ class MyApp extends App {
     return { pageProps };
   }
   componentDidMount() {
-    console.log("process.env.NODE_ENV===>", process.env.NODE_ENV);
     initGA(process.env.NODE_ENV);
     logPageView(process.env.NODE_ENV);
     Router.router.events.on("routeChangeComplete", logPageView);
@@ -55,6 +57,7 @@ class MyApp extends App {
           <Provider store={store}>
             <React.Fragment>
               <Header />
+              <MenuSideBar />
               <Component {...pageProps} />
             </React.Fragment>
           </Provider>

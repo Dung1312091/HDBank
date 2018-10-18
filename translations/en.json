@@ -1,11 +1,8 @@
 {
-    "app.title": "this is eng",
-    "app.intro": "Demo <code>src/App.js</code>.",
-    "app.home": "Hme",
-    "app.news": "News",
-    "app.product":"Products",
-    "app.menu1": " borrow",
-    "app.menu2": "service",
-    "app.menu3": "Electronic",
-    "app.menu4": "Cart"
+  "app.title": "Đây là ngôn ngữ Việt Nam",
+  "app.intro": "Demo <code>src/App.js</code>.",
+  "app.personal": "Personal",
+  "app.enterprise": "Enterprise",
+  "app.preferred": "Preferred Customers",
+  "app.investors": "Investors"
 }

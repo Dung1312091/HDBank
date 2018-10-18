@@ -8,10 +8,10 @@ class MenuSideBar extends Component {
       <div>
         <ul>
           <li className="menu">
-            <Link href="#">
+            <Link href="/">
               <a>
                 <FormattedMessage
-                  id="app.menu1"
+                  id="app.personal"
                   defaultMessage="aaaaaaaaaaaaaaaaa"
                   description="Welcome header on app main page"
                   values={{ what: "react-intl" }}
@@ -20,10 +20,10 @@ class MenuSideBar extends Component {
             </Link>
           </li>
           <li className="menu">
-            <Link href="#">
+            <Link href="/?site=enterprise" as="/enterprise">
               <a>
                 <FormattedMessage
-                  id="app.menu2"
+                  id="app.enterprise"
                   defaultMessage="aaaaaaaaaaaaaaaaa"
                   description="Welcome header on app main page"
                   values={{ what: "react-intl" }}
@@ -32,10 +32,10 @@ class MenuSideBar extends Component {
             </Link>
           </li>
           <li className="menu">
-            <Link href="#">
+            <Link href="/?site=preferred-customers" as="/referred-customers">
               <a>
                 <FormattedMessage
-                  id="app.menu3"
+                  id="app.preferred"
                   defaultMessage="aaaaaaaaaaaaaaaaa"
                   description="Welcome header on app main page"
                   values={{ what: "react-intl" }}
@@ -44,10 +44,10 @@ class MenuSideBar extends Component {
             </Link>
           </li>
           <li className="menu">
-            <Link href="#">
+            <Link href="/?site=investors" as="/investors">
               <a>
                 <FormattedMessage
-                  id="app.menu4"
+                  id="app.investors"
                   defaultMessage="aaaaaaaaaaaaaaaaa"
                   description="Welcome header on app main page"
                   values={{ what: "react-intl" }}
