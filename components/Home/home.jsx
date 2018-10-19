@@ -1,7 +1,8 @@
 import { Component } from "react";
 import { FormattedMessage, injectIntl } from "react-intl";
 // import Link from "next/link";
-import { Link } from "../../routes";
+// import { Link } from "../../routes";
+import ActiveLink from "../ActiveLink";
 import "./style.scss";
 class MenuSideBar extends Component {
   render() {
@@ -9,7 +10,7 @@ class MenuSideBar extends Component {
       <div>
         <ul>
           <li className="menu">
-            <Link route="home">
+            <ActiveLink route="home" href="/">
               <a>
                 <FormattedMessage
                   id="app.personal"
@@ -18,10 +19,10 @@ class MenuSideBar extends Component {
                   values={{ what: "react-intl" }}
                 />
               </a>
-            </Link>
+            </ActiveLink>
           </li>
           <li className="menu">
-            <Link route="enterprise">
+            <ActiveLink route="enterprise" href="/enterprise">
               <a>
                 <FormattedMessage
                   id="app.enterprise"
@@ -30,10 +31,10 @@ class MenuSideBar extends Component {
                   values={{ what: "react-intl" }}
                 />
               </a>
-            </Link>
+            </ActiveLink>
           </li>
           <li className="menu">
-            <Link route="preferred-customers">
+            <ActiveLink route="preferred-customers" href="/preferred-customers">
               <a>
                 <FormattedMessage
                   id="app.preferred"
@@ -42,10 +43,10 @@ class MenuSideBar extends Component {
                   values={{ what: "react-intl" }}
                 />
               </a>
-            </Link>
+            </ActiveLink>
           </li>
           <li className="menu">
-            <Link route="investors">
+            <ActiveLink route="investors" href="/investors">
               <a>
                 <FormattedMessage
                   id="app.investors"
@@ -54,10 +55,10 @@ class MenuSideBar extends Component {
                   values={{ what: "react-intl" }}
                 />
               </a>
-            </Link>
+            </ActiveLink>
           </li>
           <li className="menu">
-            <Link route="/post/12">
+            <ActiveLink route="/post/12" href="/post/12">
               <a>
                 <FormattedMessage
                   id="app.investors"
@@ -66,10 +67,10 @@ class MenuSideBar extends Component {
                   values={{ what: "react-intl" }}
                 />
               </a>
-            </Link>
+            </ActiveLink>
           </li>
           {/* <li className="menu">
-            <Link route="home">
+            <ActiveLink href="/homePage" as="/">
               <a>
                 <FormattedMessage
                   id="app.investors"
@@ -78,10 +79,10 @@ class MenuSideBar extends Component {
                   values={{ what: "react-intl" }}
                 />
               </a>
-            </Link>
+            </ActiveLink>
           </li>
           <li className="menu">
-            <Link route="enterprise">
+            <ActiveLink href="/homePage/?site=enterprise" as="/enterprise">
               <a>
                 <FormattedMessage
                   id="app.investors"
@@ -90,10 +91,10 @@ class MenuSideBar extends Component {
                   values={{ what: "react-intl" }}
                 />
               </a>
-            </Link>
+            </ActiveLink>
           </li>
           <li className="menu">
-            <Link route="/post/12">
+            <ActiveLink href="/productDetail" as="/products">
               <a>
                 <FormattedMessage
                   id="app.investors"
@@ -102,18 +103,8 @@ class MenuSideBar extends Component {
                   values={{ what: "react-intl" }}
                 />
               </a>
-            </Link>
-            <Link route="/post/34">
-              <a>
-                <FormattedMessage
-                  id="app.investors"
-                  defaultMessage="aaaaaaaaaaaaaaaaa"
-                  description="Welcome header on app main page"
-                  values={{ what: "react-intl" }}
-                />
-              </a>
-            </Link> */}
-          {/* </li> */}
+            </ActiveLink>
+          </li> */}
         </ul>
       </div>
     );
